@@ -1,0 +1,13 @@
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?"
+record_id,my_first_instrument,,text,"Record ID",,,,,,,,,,,,
+timeoffact,my_first_instrument,,text,"Time of observation",,"Can retroactively enter",datetime_seconds_ymd,,,,,y,,,,
+typeoffact,my_first_instrument,,dropdown,"Type of Fact","1, Writing Burst | 2, Weight | 3, Run",,,,,,,y,,,,
+writingprewords,my_first_instrument,,text,"Words existing?",,"If editing existing text",integer,,,,"[typeoffact] = '1'",,,,,
+writingwords,my_first_instrument,,text,"Words written",,"in number of words",integer,,,,"[typeoffact] = '1'",,,,,
+writingtime,my_first_instrument,,text,"Time Spent Writing",,"in minutes",integer,,,,"[typeoffact] = '1'",,,,,
+writingnotes,my_first_instrument,,notes,"Notes about writing",,,,,,,"[typeoffact] = '1'",,,,,
+weightvalue,my_first_instrument,,text,Weight,,pounds,number,,,,"[typeoffact] = '2'",,,,,
+weightnotes,my_first_instrument,,notes,"Weight Notes",,,,,,,"[typeoffact] = '2'",,,,,
+rundistance,my_first_instrument,,text,"Running Distance",,,number,,,,"[typeoffact] = '3'",,,,,
+runtime,my_first_instrument,,text,"Running time",,"in minutes",number,,,,"[typeoffact] = '3'",,,,,
+runtags,my_first_instrument,,notes,"Running notes and tags (separated by space)",,,,,,,"[typeoffact] = '3'",,,,,
