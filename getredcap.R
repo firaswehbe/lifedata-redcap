@@ -35,3 +35,6 @@ plot(myruns$timeoffact.timestamp,myruns$total,
 abline(v=mystartrun,lwd=1,lty="dashed")
 axis(side=4)
 dev.off()
+
+# Specific special sub-analyses below
+source('plottonsillectomy.R')
