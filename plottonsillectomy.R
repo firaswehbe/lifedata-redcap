@@ -2,7 +2,7 @@
 # Should be sourced after getredcap.R
 
 mytonsilDate <- as.Date("2014-06-11")
-mytonsilwindow <- c(mytonsilDate-1,mytonsilDate+20)
+mytonsilwindow <- c(mytonsilDate-1,mytonsilDate+30)
 mytonsilwindow <- as.POSIXct(mytonsilwindow)
 
 mytonsilweightsper <- data.frame(weights=myweights$weightvalue,timeof=myweights$timeoffact.timestamp)
