@@ -20,6 +20,7 @@ timespan = c(min(mylife$timeoffact.timestamp),max(mylife$timeoffact.timestamp))
 myruns<-mylife[mylife$typeoffact==3,]
 myruns$total<-cumsum(myruns$rundistance)
 mystartrun<-min(myruns$timeoffact.timestamp)
+mystartitf<-as.POSIXct("2014-07-28T07:00")
 
 myweights<-mylife[mylife$typeoffact==2,]
 
@@ -33,6 +34,7 @@ par(new=TRUE)
 plot(myruns$timeoffact.timestamp,myruns$total,
      ylim=c(0,300),xlim=timespan,col="red",type="s",lwd=3,yaxt='n',ann=FALSE)
 abline(v=mystartrun,lwd=1,lty="dashed")
+abline(v=mystartitf,lwd=1,lty="dashed")
 axis(side=4)
 dev.off()
 
